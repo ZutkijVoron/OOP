@@ -1,7 +1,5 @@
 package OOPSeminar1;
 
-import java.util.List;
-
 public abstract class Product {
     private String name;
     private double cost;

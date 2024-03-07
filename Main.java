@@ -2,8 +2,6 @@ package OOPSeminar1;
 
 import java.util.ArrayList;
 
-import OOPSeminar1.BottleOfWaterVendingMachine;
-
 public class Main {
     public static void main(String[] args) {
         BottleOfWatter b1 = new BottleOfWatter("1", 1, 1);
