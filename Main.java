@@ -1,4 +1,8 @@
+package OOPSeminar1;
+
 import java.util.ArrayList;
+
+import OOPSeminar1.BottleOfWaterVendingMachine;
 
 public class Main {
     public static void main(String[] args) {
@@ -16,9 +20,9 @@ public class Main {
         vendingMachine.addBottleOfWater(b5);
         System.out.println(vendingMachine.getProduct("20", 5));
         System.out.println(vendingMachine.getProduct("20", 100));
-//        for (BottleOfWatter b : vendingMachine.getBottleOfWatters()) {
-//            System.out.println(b);
-//        }
+        // for (BottleOfWatter b : vendingMachine.getBottleOfWatters()) {
+        // System.out.println(b);
+        // }
     }
 
 }
