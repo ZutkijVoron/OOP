@@ -3,23 +3,23 @@ package OOPSeminar1;
 import java.util.List;
 
 public class BottleOfWaterVendingMachine implements VendingMachine {
-    List<BottleOfWatter> bottleOfWatters;
+    List<BottleOfWater> bottleOfWaters;
 
-    public BottleOfWaterVendingMachine(List<BottleOfWatter> products) {
-        this.bottleOfWatters = products;
+    public BottleOfWaterVendingMachine(List<BottleOfWater> products) {
+        this.bottleOfWaters = products;
     }
 
-    public List<BottleOfWatter> getBottleOfWatters() {
-        return bottleOfWatters;
+    public List<BottleOfWater> getBottleOfWaters() {
+        return bottleOfWaters;
     }
 
-    public void setBottleOfWatters(List<BottleOfWatter> bottleOfWatters) {
-        this.bottleOfWatters = bottleOfWatters;
+    public void setBottleOfWaters(List<BottleOfWater> bottleOfWaters) {
+        this.bottleOfWaters = bottleOfWaters;
     }
 
     @Override
     public Product getProduct(String name) {
-        for (BottleOfWatter item : bottleOfWatters) {
+        for (BottleOfWater item : bottleOfWaters) {
             if (item.getName().equals(name))
                 return item;
         }
@@ -27,14 +27,14 @@ public class BottleOfWaterVendingMachine implements VendingMachine {
     }
 
     public Product getProduct(String name, double volume) {
-        for (BottleOfWatter bottle : bottleOfWatters) {
+        for (BottleOfWater bottle : bottleOfWaters) {
             if (bottle.getName().equals(name) && bottle.getVolume() == volume)
                 return bottle;
         }
         return null;
     }
 
-    public void addBottleOfWater(BottleOfWatter bottleOfWatter) {
-        this.bottleOfWatters.add(bottleOfWatter);
+    public void addBottleOfWater(BottleOfWater bottleOfWater) {
+        this.bottleOfWaters.add(bottleOfWater);
     }
 }

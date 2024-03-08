@@ -4,21 +4,25 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        BottleOfWatter b1 = new BottleOfWatter("1", 1, 1);
-        BottleOfWatter b2 = new BottleOfWatter("2", 2, 2);
-        BottleOfWatter b3 = new BottleOfWatter("5", 4, 3);
-        BottleOfWatter b4 = new BottleOfWatter("15", 123, 1);
-        BottleOfWatter b5 = new BottleOfWatter("20", 6, 5);
+        HotDrink b1 = new HotDrink("1", 1, 1, 100);
+        HotDrink b2 = new HotDrink("2", 2, 2, 10);
+        HotDrink b3 = new HotDrink("5", 4, 3, 15);
+        HotDrink b4 = new HotDrink("15", 123, 1, 11);
+        HotDrink b5 = new HotDrink("20", 6, 5, 100);
 
-        BottleOfWaterVendingMachine vendingMachine = new BottleOfWaterVendingMachine(new ArrayList<>());
-        vendingMachine.addBottleOfWater(b1);
-        vendingMachine.addBottleOfWater(b2);
-        vendingMachine.addBottleOfWater(b3);
-        vendingMachine.addBottleOfWater(b4);
-        vendingMachine.addBottleOfWater(b5);
-        System.out.println(vendingMachine.getProduct("20", 5));
-        System.out.println(vendingMachine.getProduct("20", 100));
-        // for (BottleOfWatter b : vendingMachine.getBottleOfWatters()) {
+        HotDrinkMachine vendingMachine = new HotDrinkMachine(new ArrayList<HotDrink>() {
+            {
+                add(b1);
+                add(b2);
+                add(b3);
+                add(b4);
+                add(b5);
+            }
+        });
+        System.out.println(vendingMachine.getProduct("20", 5, 100));
+        System.out.println(vendingMachine.getProduct("20", 6, 100));
+        System.out.println(vendingMachine.getProduct("15", 1, 10));
+        // for (BottleOfWater b : vendingMachine.getBottleOfWaters()) {
         // System.out.println(b);
         // }
     }

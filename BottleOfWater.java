@@ -1,9 +1,9 @@
 package OOPSeminar1;
 
-public class BottleOfWatter extends Product {
+public class BottleOfWater extends Product {
     private double volume;
 
-    public BottleOfWatter(String name, double cost, double volume) {
+    public BottleOfWater(String name, double cost, double volume) {
         super(name, cost);
         this.volume = volume;
     }
@@ -18,7 +18,7 @@ public class BottleOfWatter extends Product {
 
     @Override
     public String toString() {
-        return "BottleOfWatter{" +
+        return "BottleOfWater{" +
                 "name = " + super.getName() +
                 ";volume = " + volume +
                 ";cost = " + super.getCost() +
